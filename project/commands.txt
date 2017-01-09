@@ -1,0 +1,6 @@
+cat project/extract/input/input.mrk | perl -w project/extract/scripts/marc_extract.pl > project/extract/output/output.txt && cp project/extract/output/series_info.txt project/normalize/input/series_info.txt && cp project/extract/output/output.txt project/normalize/input/output.txt && ./project/normalize/scripts/marc_normalization.pl -P project -I output.txt -O normalized_output.txt -pcg
+
+cat project/extract/input/sample.mrk | perl -w project/extract/scripts/marc_extract.pl > project/extract/output/output.txt && cp project/extract/output/series_info.txt project/normalize/input/series_info.txt && cp project/extract/output/output.txt project/normalize/input/output.txt && ./project/normalize/scripts/marc_normalization.pl -P project -I output.txt -O normalized_output.txt -pcg
+
+cat project/extract/input/big.mrk | perl -w project/extract/scripts/marc_extract.pl > project/extract/output/output.txt && cp project/extract/output/series_info.txt project/normalize/input/series_info.txt && cp project/extract/output/output.txt project/normalize/input/output.txt && ./project/normalize/scripts/marc_normalization.pl -P project -I output.txt -O normalized_output.txt -pcg && perl reporter.pl
+
